@@ -10,7 +10,6 @@ public class Cat {
 
     public void show() {
         System.out.println("It's name is " + this.name + ". It's ate a " + this.food);
-        //System.out.println(this.food);
     }
 
     public void eat(String meat) {
