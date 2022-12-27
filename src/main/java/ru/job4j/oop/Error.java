@@ -22,14 +22,14 @@ public class Error {
     }
 
     public static void main(String[] args) {
-        Error message_1 = new Error();
-        Error message_2 = new Error(true, 1, "Неустранимая ошибка");
-        Error message_3 = new Error(true, 2, "Некритичная ошибка");
-        Error message_4 = new Error(false, 3, "Ложная ошибка");
-        message_1.printInfo();
-        message_2.printInfo();
-        message_3.printInfo();
-        message_4.printInfo();
+        Error message1 = new Error();
+        Error message2 = new Error(true, 1, "Неустранимая ошибка");
+        Error message3 = new Error(true, 2, "Некритичная ошибка");
+        Error message4 = new Error(false, 3, "Ложная ошибка");
+        message1.printInfo();
+        message2.printInfo();
+        message3.printInfo();
+        message4.printInfo();
     }
 }
 
