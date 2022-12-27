@@ -6,3 +6,4 @@ public class Ball {
         System.out.println(result);
     }
 }
+

@@ -6,3 +6,4 @@ Fox fox = new Fox();
 Hare hare = new Hare();
 Wolf wolf = new Wolf();
 }
+
