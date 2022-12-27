@@ -14,7 +14,6 @@ public class Student {
         Student petya = new Student();
         petya.music();
         petya.song();
-
     }
 }
 
