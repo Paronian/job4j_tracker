@@ -7,3 +7,4 @@ Hare hare = new Hare();
 Wolf wolf = new Wolf();
 }
 
+
