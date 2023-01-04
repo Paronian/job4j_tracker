@@ -58,3 +58,4 @@ public class License {
         return Objects.hash(owner, model, code, created);
     }
 }
+
