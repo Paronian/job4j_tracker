@@ -52,6 +52,17 @@ public class StartUI {
                         System.out.println("Ошибка удаления заявки.");
                     }
                     break;
+                case 4:
+                    System.out.println("=== Find item by id ===");
+                    System.out.print("Enter id: ");
+                    int id4 = Integer.parseInt(scanner.nextLine());
+                    Item item4 = tracker.findById(id4);0
+                    if (item4 != null) {
+                        System.out.println(item4);
+                    } else {
+                        System.out.println("Заявка с введенным id: " + id4 + " не найдена.");
+                    }
+                    break;
                 case 6:
                     System.out.println("Вы выбрали выход из программы");
                     run = false;
