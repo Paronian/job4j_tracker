@@ -14,19 +14,32 @@ public class StartUI {
                 case 0:
                     System.out.println("=== Create a new Item ===");
                     System.out.print("Enter name: ");
-                    String name = scanner.nextLine();
-                    Item item = new Item(name);
+                    String name0 = scanner.nextLine();
+                    Item item = new Item(name0);
                     tracker.add(item);
                     break;
                 case 1:
                     System.out.println("=== Show all items ===");
                     Item[] items = tracker.findAll();
                     if (items.length > 0) {
-                        for (Item itemForShow : items) {
-                            System.out.println(itemForShow);
+                        for (Item item1 : items) {
+                            System.out.println(item1);
                         }
                     } else {
                         System.out.println("Хранилище еще не содержит заявок");
+                    }
+                    break;
+                case 2:
+                    System.out.println("=== Edit item ===");
+                    System.out.print("Enter id: ");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Enter name: ");
+                    String name = scanner.nextLine();
+                    Item item2 = new Item(name);
+                    if (tracker.replace(id, item2)) {
+                        System.out.println("Заявка изменена успешно.");
+                    } else {
+                        System.out.println("Ошибка замены заявки.");
                     }
                     break;
                 case 6:
@@ -39,7 +52,6 @@ public class StartUI {
             }
         }
     }
-
 
     private void showMenu() {
         String[] menu = {
