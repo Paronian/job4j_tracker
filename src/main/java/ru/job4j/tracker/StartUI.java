@@ -87,6 +87,7 @@ public class StartUI {
         }
     }
 
+
     private void showMenu() {
         String[] menu = {
                 "Add new Item", "Show all items", "Edit item",
