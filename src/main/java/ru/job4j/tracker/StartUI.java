@@ -87,7 +87,6 @@ public class StartUI {
         }
     }
 
-
     private void showMenu() {
         String[] menu = {
                 "Add new Item", "Show all items", "Edit item",
@@ -106,4 +105,5 @@ public class StartUI {
         new StartUI().init(scanner, tracker);
     }
 }
+
 
