@@ -15,8 +15,8 @@ public class StartUI {
                     System.out.println("=== Create a new Item ===");
                     System.out.print("Enter name: ");
                     String name0 = scanner.nextLine();
-                    Item item = new Item(name0);
-                    tracker.add(item);
+                    Item item0 = new Item(name0);
+                    tracker.add(item0);
                     break;
                 case 1:
                     System.out.println("=== Show all items ===");
@@ -32,14 +32,24 @@ public class StartUI {
                 case 2:
                     System.out.println("=== Edit item ===");
                     System.out.print("Enter id: ");
-                    int id = Integer.parseInt(scanner.nextLine());
+                    int id2 = Integer.parseInt(scanner.nextLine());
                     System.out.print("Enter name: ");
-                    String name = scanner.nextLine();
-                    Item item2 = new Item(name);
-                    if (tracker.replace(id, item2)) {
+                    String name2 = scanner.nextLine();
+                    Item item2 = new Item(name2);
+                    if (tracker.replace(id2, item2)) {
                         System.out.println("Заявка изменена успешно.");
                     } else {
                         System.out.println("Ошибка замены заявки.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("=== Delete item ===");
+                    System.out.print("Enter id: ");
+                    int id3 = Integer.parseInt(scanner.nextLine());
+                    if (tracker.delete(id3)) {
+                        System.out.println("Заявка удалена успешно.");
+                    } else {
+                        System.out.println("Ошибка удаления заявки.");
                     }
                     break;
                 case 6:
