@@ -63,6 +63,19 @@ public class StartUI {
                         System.out.println("Заявка с введенным id: " + id4 + " не найдена.");
                     }
                     break;
+                case 5:
+                    System.out.println("=== Find items by name ===");
+                    System.out.print("Enter name: ");
+                    String name5 = scanner.nextLine();
+                    Item[] items5 = tracker.findByName(name5);
+                    if (items5.length > 0) {
+                        for (Item item5 : items5) {
+                            System.out.println(item5);
+                        }
+                    } else {
+                        System.out.println("Заявки с именем: " + name5 + " не найдены.");
+                    }
+                    break;
                 case 6:
                     System.out.println("Вы выбрали выход из программы");
                     run = false;
