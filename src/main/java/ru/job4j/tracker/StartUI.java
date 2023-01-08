@@ -9,14 +9,33 @@ public class StartUI {
             showMenu();
             System.out.print("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
-            if (select == 0) {
-                System.out.println("=== Create a new Item ===");
-                System.out.print("Enter name: ");
-                String name = scanner.nextLine();
-                Item item = new Item(name);
-                tracker.add(item);
-            } else if (select == 6) {
-                run = false;
+
+            switch (select) {
+                case 0:
+                    System.out.println("=== Create a new Item ===");
+                    System.out.print("Enter name: ");
+                    String name = scanner.nextLine();
+                    Item item = new Item(name);
+                    tracker.add(item);
+                    break;
+                case 1:
+                    System.out.println("=== Show all items ===");
+                    Item[] items = tracker.findAll();
+                    if (items.length > 0) {
+                        for (Item itemForShow : items) {
+                            System.out.println(itemForShow);
+                        }
+                    } else {
+                        System.out.println("Хранилище еще не содержит заявок");
+                    }
+                    break;
+                case 6:
+                    System.out.println("Вы выбрали выход из программы");
+                    run = false;
+                    break;
+                default:
+                    System.out.println("Недопустимое значение");
+                    break;
             }
         }
     }
@@ -31,7 +50,6 @@ public class StartUI {
         for (int i = 0; i < menu.length; i++) {
             System.out.println(i + ". " + menu[i]);
         }
-
     }
 
     public static void main(String[] args) {
