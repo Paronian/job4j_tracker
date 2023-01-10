@@ -7,3 +7,4 @@ public class College {
         Object obj = student;
     }
 }
+
