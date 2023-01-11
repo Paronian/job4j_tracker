@@ -10,7 +10,6 @@ public class Tracker {
     public Item add(Item item) {
         item.setId(ids++);
         items[size++] = item;
-        System.out.println("Добавленная заявка: " + item);
         return item;
     }
 
