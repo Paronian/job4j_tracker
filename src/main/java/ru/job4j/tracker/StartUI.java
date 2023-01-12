@@ -26,8 +26,8 @@ public class StartUI {
         System.out.println("=== Edit item ===");
         int id = input.askInt("Enter id: ");
         String name = input.askStr("Enter name: ");
-        Item item2 = new Item(name);
-        if (tracker.replace(id, item2)) {
+        Item item = new Item(name);
+        if (tracker.replace(id, item)) {
             System.out.println("Заявка изменена успешно.");
         } else {
             System.out.println("Ошибка замены заявки.");
