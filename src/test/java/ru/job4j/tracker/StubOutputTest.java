@@ -33,7 +33,6 @@ class StubOutputTest {
         );
     }
 
-    // ядекюрэ
     @Test
     public void whenShowAllActionTestOutputIsSuccessfully() {
         Output out = new StubOutput();
@@ -117,3 +116,4 @@ class StubOutputTest {
         );
     }
 }
+
