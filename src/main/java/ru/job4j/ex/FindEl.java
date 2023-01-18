@@ -10,14 +10,18 @@ public class FindEl {
             }
         }
         if (rsl == -1) {
-            throw new  ElementNotFoundException("Элемент не найден");
+            throw new ElementNotFoundException("Элемент не найден");
         }
         return rsl;
     }
 
+    public static boolean sent(String value, String[] abuses) throws ElementAbuseException {
+        return true;
+    }
+
     public static void main(String[] args) {
         try {
-            System.out.println(indexOf(new String[]{"Борис", "Алексей", "Миша", "Сергей"}, "Миа"));
+            System.out.println(indexOf(new String[]{"Борис", "Алексей", "Миша", "Сергей"}, "Миша"));
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }

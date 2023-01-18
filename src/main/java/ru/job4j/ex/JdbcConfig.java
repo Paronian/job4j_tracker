@@ -7,7 +7,7 @@ public class JdbcConfig {
         }
     }
 
-    public static void main(String[] args) throws UserInputException {
+    public static void main(String[] args) {
         try {
             load(null);
         } catch (UserInputException e) {
