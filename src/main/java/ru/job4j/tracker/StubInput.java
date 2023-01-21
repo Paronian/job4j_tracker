@@ -8,6 +8,10 @@ public class StubInput implements Input {
         this.answers = answers;
     }
 
+    public String[] getAnswers() {
+        return answers;
+    }
+
     @Override
     public String askStr(String question) {
         System.out.print(question);
