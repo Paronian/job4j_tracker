@@ -1,7 +1,6 @@
 package ru.job4j.early;
 
 public class PasswordValidator {
-
     static boolean containsUpperCaseLetter(String password) {
         boolean rsl = false;
         for (int i = 0; i < array(password).length; i++) {
@@ -89,4 +88,5 @@ public class PasswordValidator {
         return password;
     }
 }
+
 
