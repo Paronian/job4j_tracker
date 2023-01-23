@@ -41,7 +41,6 @@ class ValidateInputTest {
 
     @Test
     public void whenManyCorrectNumbers() {
-        int i = 0;
         Output out = new StubOutput();
         StubInput in = new StubInput(new String[]{"2", "3", "15"});
         ValidateInput input = new ValidateInput(out, in);
@@ -53,4 +52,5 @@ class ValidateInputTest {
         assertThat(selected).containsExactly(expected);
     }
 }
+
 
