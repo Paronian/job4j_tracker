@@ -48,6 +48,12 @@ public class PasswordValidator {
                     && !Character.isDigit(array[i])) {
                 rslAlphabetic = true;
             }
+            if (rslUpperCase
+                    && rslLowerCase
+                    && rslDigit
+                    && rslAlphabetic) {
+                break;
+            }
         }
         if (!rslUpperCase) {
             throw new IllegalArgumentException("Password should contain at least one uppercase letter");
