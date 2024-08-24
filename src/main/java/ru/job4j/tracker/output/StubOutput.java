@@ -1,4 +1,6 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.output;
+
+import ru.job4j.tracker.output.Output;
 
 public class StubOutput implements Output {
     private final StringBuilder buffer = new StringBuilder();
@@ -13,7 +15,7 @@ public class StubOutput implements Output {
         buffer.append(System.lineSeparator());
     }
 
-    @Override
+   @Override
     public String toString() {
         return buffer.toString();
     }

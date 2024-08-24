@@ -6,7 +6,15 @@ public class HideExampleMain {
         Animal cat = new Cat();
         animal.instanceInvoke();
         cat.instanceInvoke();
+        animal.staticInvoke();
+        cat.staticInvoke();
         Animal.staticInvoke();
         Cat.staticInvoke();
+
+       /* cat.staticInvoke();
+        Animal other = null;
+        other.staticInvoke();
+        Cat kitty = new Cat();
+        kitty.staticInvoke();*/
     }
 }
