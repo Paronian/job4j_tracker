@@ -3,7 +3,7 @@ package ru.job4j.search;
 import java.util.LinkedList;
 
 public class PriorityQueue {
-    private LinkedList<Task> tasks = new LinkedList<>();
+    public LinkedList<Task> tasks = new LinkedList<>();
 
     /**
      * Метод должен вставлять в нужную позицию элемент.
@@ -17,7 +17,9 @@ public class PriorityQueue {
         int index = 0;
         for (Task element : tasks) {
             if (task.getPriority() < element.getPriority()) {
-                index = element.getPriority();
+                break;
+            } else {
+                index++;
             }
         }
         this.tasks.add(index, task);
