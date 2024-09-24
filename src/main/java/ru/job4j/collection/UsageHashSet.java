@@ -6,7 +6,9 @@ public class UsageHashSet {
     public static void main(String[] args) {
         HashSet<Auto> autos = new HashSet<>();
         autos.add(new Auto("Lada"));
+        autos.add(new Auto("Lada"));
         autos.add(new Auto("BMW"));
+        autos.add(new Auto("Volvo"));
         autos.add(new Auto("Volvo"));
         autos.add(new Auto("Toyota"));
 
