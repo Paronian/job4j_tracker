@@ -23,10 +23,9 @@ public class AppleStore {
 
     public String getFirstUpsetCustomer() {
         Customer customer = null;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count + 1; i++) {
             customer = queue.poll();
         }
-        return queue.element().name();
+        return customer.name();
     }
-
 }
