@@ -79,7 +79,6 @@ public class BankService {
         }
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         destinationAccount.setBalance(destinationAccount.getBalance() + amount);
-        //boolean result = false;
         return true;
     }
 
@@ -87,4 +86,5 @@ public class BankService {
         return users.get(user);
     }
 }
+
 
