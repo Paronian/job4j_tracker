@@ -10,3 +10,4 @@ public record User(String name, int age) implements Comparable<User> {
     }
 }
 
+
