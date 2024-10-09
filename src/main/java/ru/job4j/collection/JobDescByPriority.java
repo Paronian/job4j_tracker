@@ -9,3 +9,4 @@ public class JobDescByPriority implements Comparator<Job> {
         return Integer.compare(o2.priority(), o1.priority());
     }
 }
+

@@ -7,3 +7,4 @@ public record Job(String name, int priority) implements Comparable<Job> {
         return Integer.compare(this.priority, another.priority);
     }
 }
+

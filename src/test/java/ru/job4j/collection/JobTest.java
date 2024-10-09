@@ -88,7 +88,7 @@ class JobTest {
     }
 
     @Test
-    public void whenComparatorByNameAndPriority() {
+    public void whenComparatorByNameAndPriorityDesc() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDescByPriority());
         int rsl = cmpNamePriority.compare(
                 new Job("Impl task", 0),
@@ -98,16 +98,72 @@ class JobTest {
     }
 
     @Test
-    public void whenComparatorByNameAndPriority1() {
-        Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDescByPriority());
+    public void whenComparatorByNameAndPriorityAsc() {
+        Comparator<Job> cmpNamePriority = new JobAscByName().thenComparing(new JobAscByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Impl task", 0),
+                new Job("Office work", 1),
+                new Job("Animal care", 10)
+        );
+        assertThat(rsl).isGreaterThan(0);
+    }
+
+    @Test
+    public void whenComparatorByNameAndPriorityAscAndNameEqual() {
+        Comparator<Job> cmpNamePriority = new JobAscByName().thenComparing(new JobAscByPriority());
+        int rsl = cmpNamePriority.compare(
+                new Job("Animal care", 1),
+                new Job("Animal care", 0)
+        );
+        assertThat(rsl).isGreaterThan(0);
+    }
+
+    @Test
+    public void whenComparatorByNameAndPriorityAscAndAllEqual() {
+        Comparator<Job> cmpNamePriority = new JobAscByName().thenComparing(new JobAscByPriority());
+        int rsl = cmpNamePriority.compare(
+                new Job("Animal care", 1),
+                new Job("Animal care", 1)
+        );
+        assertThat(rsl).isEqualTo(0);
+    }
+
+    @Test
+    public void whenComparatorByPriorityAndNameAsc() {
+        Comparator<Job> cmpNamePriority = new JobAscByPriority().thenComparing(new JobAscByName());
+        int rsl = cmpNamePriority.compare(
+                new Job("Impl task", 1),
+                new Job("Fix bug", 0)
+        );
+        assertThat(rsl).isGreaterThan(0);
+    }
+
+    @Test
+    public void whenComparatorByPriorityAndNameAndPriorityIsEqual() {
+        Comparator<Job> cmpNamePriority = new JobAscByPriority().thenComparing(new JobAscByName());
+        int rsl = cmpNamePriority.compare(
+                new Job("Impl task", 1),
+                new Job("Fix bug", 1)
+        );
+        assertThat(rsl).isGreaterThan(0);
+    }
+
+    @Test
+    public void whenComparatorByNameAscAndPriorityDesc() {
+        Comparator<Job> cmpNamePriority = new JobAscByName().thenComparing(new JobDescByPriority());
+        int rsl = cmpNamePriority.compare(
+                new Job("Impl task", 10),
+                new Job("Fix bug", 1)
+        );
+        assertThat(rsl).isGreaterThan(0);
+    }
+
+    @Test
+    public void whenComparatorByNameAscAndPriorityDescAndNemeEqual() {
+        Comparator<Job> cmpNamePriority = new JobAscByName().thenComparing(new JobDescByPriority());
+        int rsl = cmpNamePriority.compare(
+                new Job("Fix bug", 10),
                 new Job("Fix bug", 1)
         );
         assertThat(rsl).isLessThan(0);
     }
-
-
-
-
 }
