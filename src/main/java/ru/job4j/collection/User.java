@@ -6,8 +6,9 @@ public record User(String name, int age) implements Comparable<User> {
     public int compareTo(User o) {
         int compareName = this.name.compareTo(o.name);
         return compareName == 0 ? Integer.compare(this.age, o.age)
-                                                : compareName;
+                : compareName;
     }
 }
+
 
 
