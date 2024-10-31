@@ -21,7 +21,6 @@ public class Departments {
     }
 
     public static void sortAsc(List<String> departments) {
-        //departments.sort(Comparator.naturalOrder());
         Collections.sort(departments, Comparator.naturalOrder());
     }
 
@@ -29,3 +28,4 @@ public class Departments {
         Collections.sort(departments, new DepartmentsDescComparator());
     }
 }
+

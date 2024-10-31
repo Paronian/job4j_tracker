@@ -20,3 +20,4 @@ public class DepartmentsDescComparator implements Comparator<String> {
         return rightArray[0].compareTo(leftArray[0]);
     }
 }
+
