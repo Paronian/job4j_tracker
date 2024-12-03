@@ -12,4 +12,3 @@ public class DepartmentsDescComparator implements Comparator<String> {
         return compareDepartment != 0 ? compareDepartment : left.compareTo(right);
     }
 }
-
